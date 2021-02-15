@@ -3,5 +3,5 @@ const price = document.getElementById("price");
 const package = document.getElementById("package");
 
 slider.oninput = () => {
-    price.innerText = 'haha';
+    console.log("haha");
 }
