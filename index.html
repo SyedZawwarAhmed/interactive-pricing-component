@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet"> 
+
     <link
       rel="icon"
       type="image/png"
@@ -21,7 +20,7 @@
   </head>
 
   <body>
-    <img src="images/pattern-circles.svg" alt="">
+    <img class="circles" src="images/pattern-circles.svg" alt="">
     <div class="head">
       <h1>Simple, traffic-based pricing</h1>
       <p>Sign-up for our 30-day trial. No credit card required.</p>
@@ -29,8 +28,9 @@
 
     <div class="main">
       <div class="pricing">
-        <p><span id="package">100K</span> Pageviews</p>
-        <h1>$<span id="price">16.00</span>/month</h1>
+        <p><span id="package">100K</span> PAGEVIEWS</p>
+
+        <h1 class="per-month"><span id="price" class="price">$16.00</span><span class="month">/ month</span></h1>
       </div>
       
       <input type="range" min="1" max="5" value="3" class="slider" id="slider">
