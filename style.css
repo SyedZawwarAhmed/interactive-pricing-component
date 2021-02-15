@@ -27,6 +27,7 @@ body {
   flex-direction: column;
   font-family: "Manrope", sans-serif;
   background-image: url(images/bg-pattern.svg);
+  background-size: auto;
   background-repeat: no-repeat;
 }
 
@@ -58,8 +59,8 @@ p {
 
 .main {
   position: absolute;
-  top: 15rem;
-  height: 20rem;
+  top: 13rem;
+  height: max-content;
   box-shadow: 0 0px 7px 3px #dddbdbfb;
   background: var(--pricing-component-bg);
   border-radius: .25rem;
@@ -102,7 +103,59 @@ p {
   width: 50px;
 }
 
+.billing {
+  display: flex;
+  align-items: center;
+  margin-left: 7.8em;
+  margin-bottom:2em;
+  gap: 0.5em
+}
+
+.switch {
+  width: 1em;
+}
+
+.discount {
+  color: var(--discount-text);
+  background-color: var(--discount-bg);
+  font-weight: 800;
+  width: 7.4em;
+  height: 1.6em;
+  text-align: center;
+  border-radius: 1em;
+  padding-top: 0.1em;
+  margin-left: 3px;
+}
+
+hr {
+  color: #ffffff57;
+  height: 1px;
+}
+
+.features {
+  margin: 2em 4em;
+  line-height: 1.8em;
+}
+
+.btn {
+  position: absolute;
+  top: 17rem;
+  left: 19.6rem;
+  padding: 1em 3.5em;
+  border-radius: 2em;
+  font-weight: 800;
+  color: var(--cta-text);
+  background: var(--text-cta-bg);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
 .attribution {
   position: absolute;
-  top: 37rem; 
+  top: 40rem; 
 }
