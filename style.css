@@ -30,6 +30,16 @@ body {
   background-repeat: no-repeat;
 }
 
+h1 {
+  font-weight: 800;
+  color: var(--text-cta-bg);
+}
+
+span, 
+p {
+  color: var(--text)
+}
+
 .circles {
   position: absolute;
   top: 2rem;
@@ -41,15 +51,9 @@ body {
   top: 4.5rem;
 }
 
-.head h1 {
-  font-weight: 800;
-  color: var(--text-cta-bg);
-}
-
 .head p {
   font-size: 15px;
   font-weight: 800;
-  color: var(--text);
 }
 
 .main {
@@ -70,7 +74,6 @@ body {
 }
 
 .pricing p {
-  color: var(--text);
   font-weight: 800;
 }
 
@@ -85,7 +88,6 @@ body {
 .month {
   font-size: 15px;
   font-weight: 600;
-  color: var(--text);
   margin-top: 0.8em;
   margin-left: 0.3em;
 }
@@ -94,6 +96,10 @@ body {
   display: flex;
   margin: 2rem auto;
   width: 75%;
+}
+
+.slider::-webkit-slider-thumb {
+  width: 50px;
 }
 
 .attribution {
