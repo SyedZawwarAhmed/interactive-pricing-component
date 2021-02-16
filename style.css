@@ -360,5 +360,6 @@ hr {
 
   .attribution p {
     display: inline-block;
+    height: 1.75rem;
   }
 }
