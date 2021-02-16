@@ -276,6 +276,10 @@ hr {
   display: inline;
 }
 
+.attribution a {
+  text-decoration: none;
+}
+
 /* =============
   media qurries 
 ================ */
