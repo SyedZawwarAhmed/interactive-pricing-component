@@ -3,12 +3,12 @@ const price = document.getElementById("price");
 const package = document.getElementById("package");
 const fill = document.getElementById("fill");
 const toggle = document.getElementById("toggle");
-const discount = 25;
+const plan = document.getElementById("plan");
+
+let num = 16;
+let yearly = 144;
 
 slider.oninput = () => {
-    let num ;
-    let yearly; 
-
     switch(slider.value) {
         case "1":
             num = 8;
@@ -39,5 +39,17 @@ slider.oninput = () => {
 
     yearly = ((num * 12) - (((num * 12)* 25) / 100)).toFixed(0);
     
+    
     price.innerText = toggle.checked ? "$" + yearly + ".00" : "$" + num + ".00";
+}
+
+toggle.oninput = () => {
+    if (toggle.checked) {
+        plan.innerText = "/ year";
+        price.innerText = "$" + yearly + ".00";
+    }
+    else {
+        plan.innerText = "/ month";
+        price.innerText = "$" + num + ".00";
+    }
 }
