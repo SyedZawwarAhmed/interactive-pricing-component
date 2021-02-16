@@ -61,7 +61,7 @@ p {
   position: absolute;
   top: 13rem;
   height: max-content;
-  box-shadow: 0 0px 7px 3px #dddbdbfb;
+  box-shadow: 0 0px 7px 3px rgba(0, 0, 0, 0.1);
   background: var(--pricing-component-bg);
   border-radius: .25rem;
   width: 35rem;
@@ -112,7 +112,34 @@ p {
 }
 
 .switch {
-  width: 1em;
+  -webkit-appearance: none;
+  position: relative;
+  background: var(--toggle-bg);
+  width: 3rem;
+  height: 1.5rem;
+  border-radius: 1rem;
+  outline: none;
+}
+
+.switch::before {
+  content: '';
+  position: absolute;
+  background: var(--main-bg);
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 0;
+  left: 0;
+  border-radius: 1rem;
+  scale: 0.7;
+  transition: 0.35s;
+}
+
+.switch:checked {
+  background: var(--slider-bg);
+}
+
+.switch:checked::before {
+  transform: translateX(2.15rem);
 }
 
 .discount {
