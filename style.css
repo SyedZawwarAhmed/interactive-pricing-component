@@ -272,6 +272,10 @@ hr {
   top: 40rem; 
 }
 
+.attribution p {
+  display: inline;
+}
+
 /* =============
   media qurries 
 ================ */
@@ -342,5 +346,14 @@ hr {
   .btn {
     top: 6rem;
     left: 5px;
+  }
+
+  .attribution {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .attribution p {
+    display: inline-block;
   }
 }
