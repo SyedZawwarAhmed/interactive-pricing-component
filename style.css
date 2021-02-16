@@ -278,6 +278,8 @@ hr {
 
 .attribution a {
   text-decoration: none;
+  outline: none;
+  color: var(--text-cta-bg);
 }
 
 /* =============
