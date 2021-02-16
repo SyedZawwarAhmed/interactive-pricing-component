@@ -33,14 +33,16 @@
         <h1 class="per-month"><span id="price" class="price">$16.00</span><span class="month">/ month</span></h1>
       </div>
       
-      <label>
+      <div class="range">
+        <span id="fill" class="fill"></span>
         <input type="range" min="1" max="5" value="3" class="slider" id="slider">
-      </label>
+      </div>
+      
 
       <div class="billing">
         <span>Monthly Billing</span>
 
-        <input type="checkbox" class="switch" checked>
+        <input type="checkbox" class="switch" id="toggle">
 
         <span>Yearly Billing</span>
         <span class="discount">25% discount</span>

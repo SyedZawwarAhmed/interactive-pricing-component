@@ -1,28 +1,43 @@
 const slider = document.getElementById("slider");
 const price = document.getElementById("price");
 const package = document.getElementById("package");
+const fill = document.getElementById("fill");
+const toggle = document.getElementById("toggle");
+const discount = 25;
 
 slider.oninput = () => {
+    let num ;
+    let yearly; 
+
     switch(slider.value) {
         case "1":
-            price.innerText = "$8.00";
+            num = 8;
             package.innerText = "10K";
+            fill.style.width = "0";
             break;
         case "2":
-            price.innerText = "$12.00"
+            num = 12;
             package.innerText = "50K";
+            fill.style.width = "25%";
             break;
         case "3":
-            price.innerText = "$16.00";
+            num = 16;
             package.innerText = "100K";
+            fill.style.width = "50%";
             break;
         case "4":
-            price.innerText = "$24.00";
+            num = 24;
             package.innerText = "500K";
+            fill.style.width = "75%";
             break;
         case "5":
-            price.innerText = "$36.00";
-            package.innerText = "1M$";
+            num = 36;
+            package.innerText = "1M";
+            fill.style.width = "100%";
             break;
     }  
+
+    yearly = ((num * 12) - (((num * 12)* 25) / 100)).toFixed(0);
+    
+    price.innerText = toggle.checked ? "$" + yearly + ".00" : "$" + num + ".00";
 }

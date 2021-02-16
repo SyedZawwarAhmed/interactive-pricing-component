@@ -7,6 +7,7 @@
 :root {
   --full-slider-bar: hsl(174, 77%, 80%);
   --slider-bg: hsl(174, 86%, 45%);
+  --slider-active-bg: hsl(174, 45%, 45%);
   --discount-bg: hsl(14, 92%, 95%);
   --discount-text: hsl(15, 100%, 70%);
   --cta-text: hsl(226, 100%, 87%);
@@ -70,8 +71,8 @@ p {
 .pricing {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  margin-top: 2em;
+  justify-content: space-between;
+  margin: 2em 4rem 0 4rem;
 }
 
 .pricing p {
@@ -93,20 +94,93 @@ p {
   margin-left: 0.3em;
 }
 
-.slider {
+.range {  
   display: flex;
   margin: 2rem auto;
   width: 75%;
+  position: relative;
+  background-color: var(--empty-slider-bar);
+  border-radius: 1rem;
+}
+
+.fill {
+  position: absolute;
+  content: '';
+  width: 50%;
+  height: 0.5rem;
+  border-radius: 1rem;
+  background-color: var(--full-slider-bar);
+}
+
+.slider {
+  -webkit-appearance: none;
+  position: relative;
+  background: transparent;
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 1rem;
+  outline: none;
 }
 
 .slider::-webkit-slider-thumb {
-  width: 50px;
+  -webkit-appearance: none;
+  background-image: url(images/icon-slider.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--slider-bg);
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  box-shadow: 0 0.6rem 1rem 0 var(--slider-bg);
+}
+
+.slider::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  background-color: var(--slider-active-bg);
+}
+
+.slider::-moz-range-track {
+  -webkit-appearance: none;
+  position: relative;
+  background: transparent;
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 1rem;
+  outline: none;
+}
+
+.slider::-moz-range-thumb {
+  -webkit-appearance: none;
+  background-image: url(images/icon-slider.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--slider-bg);
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+}
+
+.slider::-moz-range-thumb:hover {
+  box-shadow: 0 0.6rem 1rem 0 var(--slider-bg);
+}
+
+.slider::-moz-range-thumb:active {
+  cursor: grabbing;
+  background-color: var(--slider-active-bg);
 }
 
 .billing {
   display: flex;
   align-items: center;
-  margin-left: 7.8em;
+  margin-left: 5.7em;
   margin-bottom:2em;
   gap: 0.5em
 }
@@ -130,7 +204,7 @@ p {
   top: 0;
   left: 0;
   border-radius: 1rem;
-  scale: 0.7;
+  transform: scale(0.7);
   transition: 0.35s;
 }
 
@@ -139,7 +213,7 @@ p {
 }
 
 .switch:checked::before {
-  transform: translateX(2.15rem);
+  left: 1.5rem
 }
 
 .discount {
