@@ -231,6 +231,14 @@ p {
   margin-left: 3px;
 }
 
+.short-text, .long-text {
+  color: var(--discount-text);
+}
+
+.short-text {
+  display: none;
+}
+
 hr {
   color: #ffffff57;
   height: 1px;
@@ -314,6 +322,14 @@ hr {
   .discount {
     width: 3.3rem;
     margin: 0;
+  }
+
+  .short-text {
+    display: unset;
+  }
+
+  .long-text {
+    display: none;
   }
 
   .features {
