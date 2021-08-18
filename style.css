@@ -28,7 +28,7 @@ body {
   flex-direction: column;
   font-family: "Manrope", sans-serif;
   background-image: url(images/bg-pattern.svg);
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
